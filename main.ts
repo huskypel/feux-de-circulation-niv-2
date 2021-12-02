@@ -30,9 +30,9 @@ function pieton () {
     basic.pause(1000)
     basic.showNumber(3)
     for (let index = 0; index < 5; index++) {
-        pins.digitalWritePin(DigitalPin.P8, 0)
-        basic.pause(200)
         pins.digitalWritePin(DigitalPin.P8, 1)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P8, 0)
     }
     basic.showNumber(2)
     for (let index = 0; index < 5; index++) {
