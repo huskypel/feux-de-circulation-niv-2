@@ -1,13 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     lumiere = 3
 })
-function stresse () {
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    pins.digitalWritePin(DigitalPin.P1, 0)
-    pins.digitalWritePin(DigitalPin.P2, 2)
-    pins.digitalWritePin(DigitalPin.P8, 0)
-    pins.digitalWritePin(DigitalPin.P16, 1)
-}
 function orange () {
     pins.digitalWritePin(DigitalPin.P0, 0)
     pins.digitalWritePin(DigitalPin.P1, 1)
@@ -21,6 +14,41 @@ function pieton () {
     pins.digitalWritePin(DigitalPin.P2, 1)
     pins.digitalWritePin(DigitalPin.P8, 0)
     pins.digitalWritePin(DigitalPin.P16, 1)
+    basic.showNumber(10)
+    basic.pause(1000)
+    basic.showNumber(9)
+    basic.pause(1000)
+    basic.showNumber(8)
+    basic.pause(1000)
+    basic.showNumber(7)
+    basic.pause(1000)
+    basic.showNumber(6)
+    basic.pause(1000)
+    basic.showNumber(5)
+    basic.pause(1000)
+    basic.showNumber(4)
+    basic.pause(1000)
+    basic.showNumber(3)
+    for (let index = 0; index < 5; index++) {
+        pins.digitalWritePin(DigitalPin.P8, 0)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P8, 1)
+    }
+    basic.showNumber(2)
+    for (let index = 0; index < 5; index++) {
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P8, 0)
+    }
+    basic.showNumber(1)
+    for (let index = 0; index < 5; index++) {
+        pins.digitalWritePin(DigitalPin.P8, 1)
+        basic.pause(200)
+        pins.digitalWritePin(DigitalPin.P8, 0)
+    }
+    basic.showNumber(0)
+    basic.pause(1000)
+    basic.clearScreen()
 }
 function rouge () {
     pins.digitalWritePin(DigitalPin.P0, 0)
@@ -51,7 +79,7 @@ basic.forever(function () {
     } else if (lumiere == 3) {
         while (lumiere == 3) {
             pieton()
-            basic.pause(2000)
+            basic.pause(3000)
             lumiere = 1
         }
     }
